@@ -41,7 +41,7 @@ public class MessageProducter {
         //创建一条文本消息
         //ObjectMessage message = session.createObjectMessage(new Timestamp(System.currentTimeMillis()));
         for(int i=0;i<10;i++){
-            TextMessage textMessage = session.createTextMessage("message");
+            TextMessage textMessage = session.createTextMessage("message"+i);
             //通过消息生产者发出消息
             System.out.println("发送的消息="+textMessage.getText());
             producer.send(textMessage);
